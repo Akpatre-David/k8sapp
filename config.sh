@@ -20,8 +20,8 @@ touch credentials
 touch config
 
 echo "[default]
-aws_access_key_id = <your access key>
-aws_secret_access_key = <your access key> >> credentials
+aws_access_key_id = AKIAU6GDU7T64MA2BIVW
+aws_secret_access_key = fz8DiNfy3T5Nv+6MBkHOem+XLLSgQkjMIGuJPCjK >> credentials
 
 echo "[default]
 region = us-east-1" >> config
