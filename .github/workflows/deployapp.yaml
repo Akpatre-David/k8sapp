@@ -12,7 +12,8 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build docker image
-      run: docker build -t 17csc028/k8sapp .
+      run: |
+        docker build -t 17csc028/k8sapp .
 
     - name: "Docker login"
       run: |
