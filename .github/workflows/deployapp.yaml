@@ -1,12 +1,11 @@
-name: sample deployment
-
+name: Simple Deployment App
 on:
   push:
     branches:
       - master
 
 jobs:
-  deploy:
+  deploymentjob:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
