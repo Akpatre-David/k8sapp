@@ -1,0 +1,5 @@
+.terraform/
+*.tfstate
+*.tfstate.backup
+k8skey
+.terraform.lock.hcl  

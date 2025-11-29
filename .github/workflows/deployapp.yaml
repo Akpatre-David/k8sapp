@@ -2,22 +2,29 @@ name: Simple Deployment App
 on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
   deploymentjob:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Build docker image
-      run: |
-        docker build -t 17csc028/k8sapp .
+      - name: Build docker image
+        run: |
+          docker build -t 17csc028/k8sapp .
 
-    - name: Docker login
-      run: |
-        docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+      - name: Docker login
+        run: |
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Push image to Docker Hub
-      run: docker push 17csc028/k8sapp
+      - name: Push image to Docker Hub
+        run: docker push 17csc028/k8sapp
+
+  second_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log in
+        run: |
+          
